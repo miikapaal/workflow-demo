@@ -8,18 +8,21 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit b02e51d5a0b9c1090cda24367c2d68c7f4fb131b
-Author: David Ritzwoller <David.Ritzwoller@gmail.com>
-Date:   Wed Jan 29 21:06:58 2020 -0800
+commit 486be47cb7cc72d5a444f4efbb58fe211c0b5a8d
+Author: Miika Päällysaho <miika.paallysaho@ne.su.se>
+Date:   Wed May 26 18:54:45 2021 +0200
 
-    #110 add Loader
+    #1 Starts sketching do-files in 'analysis'
 
 
 Files changed since last commit:
 
 
-analysis/release/descriptive/plot.eps
-analysis/release/descriptive/sconscript_descriptive.log
+analysis/config_global.yaml
+analysis/source/descriptive/SConscript
+analysis/source/descriptive/illustrate_research_design.do
+analysis/source/estimation/SConscript
+config/config_stata.do
 
 ===================================
 
@@ -27,77 +30,108 @@ analysis/release/descriptive/sconscript_descriptive.log
 
 ===================================
 ./config_user.yaml:
-   modified on: 29 Jan 2020 21:07:56
-   size of file: 646
+   modified on: 13 Jul 2020 20:21:43
+   size of file: 707
 ./run.py:
-   modified on: 23 Aug 2019 16:10:40
+   modified on: 26 May 2021 18:12:51
    size of file: 449
 ./state_of_repo.log:
-   modified on: 29 Jan 2020 21:08:02
-   size of file: 525
+   modified on: 26 May 2021 21:46:26
+   size of file: 645
 ./SConstruct:
-   modified on: 23 Aug 2019 16:10:40
-   size of file: 1878
+   modified on: 26 May 2021 18:38:25
+   size of file: 1872
+./state_of_input.log:
+   modified on: 26 May 2021 21:46:22
+   size of file: 143
 ./config_global.yaml:
-   modified on: 23 Aug 2019 16:10:40
-   size of file: 1264
+   modified on: 26 May 2021 21:16:45
+   size of file: 1259
 ./sconstruct.log:
-   modified on: 29 Jan 2020 21:08:02
-   size of file: 502
-./source/prepare_data/create_data.m:
-   modified on: 23 Aug 2019 16:10:40
-   size of file: 202
-./source/prepare_data/create_data.sh:
-   modified on: 23 Aug 2019 16:10:40
-   size of file: 81
-./source/prepare_data/create_data.do:
-   modified on: 23 Aug 2019 16:10:40
-   size of file: 262
-./source/prepare_data/SConscript:
-   modified on: 23 Aug 2019 16:10:40
-   size of file: 1126
-./source/prepare_data/create_data.py:
-   modified on: 23 Aug 2019 16:10:40
-   size of file: 260
-./source/prepare_data/create_data.r:
-   modified on: 23 Aug 2019 16:10:40
-   size of file: 249
-./source/descriptive/descriptive.py:
-   modified on: 23 Aug 2019 16:10:40
-   size of file: 548
+   modified on: 26 May 2021 21:46:26
+   size of file: 583
+./input/qob1.dta:
+   modified on: 20 Jan 2017 13:50:42
+   size of file: 2307327
+./source/estimation/iv_regressions.do:
+   modified on: 26 May 2021 18:51:14
+   size of file: 10474
+./source/estimation/SConscript:
+   modified on: 26 May 2021 21:18:42
+   size of file: 418
 ./source/descriptive/SConscript:
-   modified on: 23 Aug 2019 16:10:40
-   size of file: 501
+   modified on: 26 May 2021 21:38:50
+   size of file: 801
+./source/descriptive/illustrate_research_design.do:
+   modified on: 26 May 2021 21:46:13
+   size of file: 2202
 ./release/state_of_repo.log:
-   modified on: 23 Aug 2019 16:10:40
-   size of file: 2874
+   modified on: 26 May 2021 21:46:18
+   size of file: 2860
+./release/illustrate_research_design.log:
+   modified on: 26 May 2021 21:42:15
+   size of file: 1738
+./release/state_of_input.log:
+   modified on: 26 May 2021 21:43:59
+   size of file: 143
 ./release/sconstruct.log:
-   modified on: 23 Aug 2019 16:10:40
-   size of file: 306
+   modified on: 26 May 2021 21:46:18
+   size of file: 985
 ./release/descriptive/sconscript_descriptive.log:
-   modified on: 29 Jan 2020 21:08:02
+   modified on: 26 May 2021 18:12:51
    size of file: 96
 ./release/descriptive/plot.eps:
-   modified on: 29 Jan 2020 21:08:02
+   modified on: 26 May 2021 18:12:51
    size of file: 12351
+./release/descriptive/education_by_yob_qob.eps:
+   modified on: 26 May 2021 21:46:23
+   size of file: 26123
+./release/descriptive/education_by_qob_12plus.eps:
+   modified on: 26 May 2021 21:46:26
+   size of file: 15872
+./release/descriptive/education_by_qob_lessthan12.png:
+   modified on: 26 May 2021 21:46:26
+   size of file: 14002
+./release/descriptive/education_by_qob.eps:
+   modified on: 26 May 2021 21:46:25
+   size of file: 14824
+./release/descriptive/education_by_qob_lessthan12.eps:
+   modified on: 26 May 2021 21:46:26
+   size of file: 14804
+./release/descriptive/education_by_qob.png:
+   modified on: 26 May 2021 21:46:25
+   size of file: 13681
 ./release/descriptive/table.txt:
-   modified on: 29 Jan 2020 21:08:01
+   modified on: 26 May 2021 18:12:51
    size of file: 39
-./release/lg/data.txt:
-   modified on: 29 Jan 2020 21:07:57
-   size of file: 1988897
-./build/prepare_data/sconscript_create_data.log:
-   modified on: 29 Jan 2020 21:07:57
-   size of file: 96
-./build/prepare_data/data.txt:
-   modified on: 29 Jan 2020 21:07:57
-   size of file: 1988897
-./build/descriptive/sconscript_descriptive.log:
-   modified on: 29 Jan 2020 21:08:02
-   size of file: 96
-./build/descriptive/plot.eps:
-   modified on: 29 Jan 2020 21:08:02
-   size of file: 12351
-./build/descriptive/table.txt:
-   modified on: 29 Jan 2020 21:08:01
-   size of file: 39
+./release/descriptive/sconscript.log:
+   modified on: 26 May 2021 21:46:26
+   size of file: 4402
+MAX ITERATIONS (10) HIT IN DIRECTORY: ./release/descriptive
+./build/descriptive/education_by_yob_qob.eps:
+   modified on: 26 May 2021 21:46:23
+   size of file: 26123
+./build/descriptive/education_by_qob_12plus.eps:
+   modified on: 26 May 2021 21:46:26
+   size of file: 15872
+./build/descriptive/education_by_qob_lessthan12.png:
+   modified on: 26 May 2021 21:46:26
+   size of file: 14002
+./build/descriptive/education_by_qob.eps:
+   modified on: 26 May 2021 21:46:25
+   size of file: 14824
+./build/descriptive/education_by_qob_lessthan12.eps:
+   modified on: 26 May 2021 21:46:26
+   size of file: 14804
+./build/descriptive/education_by_qob.png:
+   modified on: 26 May 2021 21:46:25
+   size of file: 13681
+./build/descriptive/sconscript.log:
+   modified on: 26 May 2021 21:46:26
+   size of file: 4402
+./build/descriptive/education_by_yob_qob.png:
+   modified on: 26 May 2021 21:46:25
+   size of file: 31160
+./build/descriptive/education_by_qob_12plus.png:
+   modified on: 26 May 2021 21:46:26
+   size of file: 15066
