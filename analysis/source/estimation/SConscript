@@ -1,0 +1,11 @@
+Import('env')
+import gslab_scons as gs
+
+build  = env['CONFIG']['global']['build']['estimation']
+source = env['CONFIG']['global']['source']['estimation']
+
+env.BuildStata(target  = ['#%s/data.txt'       % build],
+               source  = ['#%s/iv_regressions.do' % source])
+
+
+env.Install('#release', '#%s/' % build)
