@@ -123,19 +123,27 @@ theorems-ams
 \noindent
 
 \series bold
-Title
+Selected replications from
+\begin_inset Newline newline
+\end_inset
+
+Angrist and Krueger (
+\emph on
+QJE
+\emph default
+ 1991)
 \end_layout
 
 \begin_layout Author
 \noindent
-Author 1,
+Miika Päällysaho,
 \series bold
  
 \series default
-\shape italic
-Affiliation 1
+\emph on
+Stockholm University
 \series bold
-\shape default
+\emph default
 
 \begin_inset Foot
 status open
@@ -145,23 +153,11 @@ E-mail:
 \begin_inset space \space{}
 \end_inset
 
-author1@affiliation1.edu, author2@affiliation2.edu.
- Acknowledgements here.
+miika.paallysaho@ne.su.se.
 \end_layout
 
 \end_inset
 
-
-\begin_inset Newline newline
-\end_inset
-
-
-\series default
-Author 2, 
-\shape italic
-Affiliation 2
-\series bold
-\shape default
 
 \begin_inset Newline newline
 \end_inset
@@ -193,7 +189,8 @@ year
 
 \begin_layout Abstract
 \noindent
-The abstract.
+This document replicates the following empirical results from Angrist and
+ Kruger (1991): Figure I; Table III, Panel B; Table V, column (2).
 \end_layout
 
 \begin_layout Abstract
@@ -224,14 +221,39 @@ Introduction
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset citation
-LatexCommand citet
-key "alias"
-literal "false"
+In Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:illustrate_research_design"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
- studies...
+, we see that for almost all the birth cohorts, children born in the first
+ quarter of the year on average complete slightly less schooling than children
+ belonging to the same birth cohort who are born later in the year.
+ We also see that children born later in the year (in the third/fourth quarter)
+ complete on average more schooling than children born earlier in the year
+ (in the first/second quarter), even though this pattern is not as systematic.
+ These patterns hold despite the clear upward trend in average years of
+ schooling across birth cohorts.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:education_by_qob"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ illustrates that quarter of birth systematically related to years of completed
+ education only among those with less than 12 years of education.
+ This suggests that quarter of birth does not influence college or graduate
+ schooling completion, but rather that the identifying variation comes from
+ variation in the length of compulsory (and not further) education.
 \end_layout
 
 \begin_layout Standard
@@ -250,10 +272,28 @@ end{spacing}
 
 \end_layout
 
+\begin_layout Section*
+References
+\end_layout
+
 \begin_layout Standard
 \align block
 \begin_inset ERT
 status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+leftskip=2em 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+parindent=-2em
+\end_layout
 
 \begin_layout Plain Layout
 
@@ -268,15 +308,31 @@ onehalfspacing
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset bibtex
-LatexCommand bibtex
-btprint "btPrintCited"
-bibfiles "references"
-options "chicago"
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Angrist, Joshua D.
+ and Alan B.
+ Krueger.
+ 1991.
+ Does Compulsory School Attendance Affect Schooling and Earnings? 
+\emph on
+The Quarterly Journal of Economics,
+\emph default
+ 106(4), 979-1014.
 \end_layout
 
 \begin_layout Standard
@@ -289,7 +345,7 @@ options "chicago"
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "../figures/figure.lyx"
+filename "../figures/illustrate_research_design.lyx"
 
 \end_inset
 
@@ -299,26 +355,7 @@ filename "../figures/figure.lyx"
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "../../build/tables/table.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage pagebreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-\start_of_appendix
-Appendix
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:appendix"
+filename "../figures/education_by_qob.lyx"
 
 \end_inset
 
