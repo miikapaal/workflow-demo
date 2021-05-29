@@ -217,7 +217,7 @@ begin{spacing}{1.4}
 \end_layout
 
 \begin_layout Section
-Introduction
+Illustrating the research design
 \end_layout
 
 \begin_layout Standard
@@ -239,7 +239,11 @@ noprefix "false"
  (in the first/second quarter), even though this pattern is not as systematic.
  These patterns hold despite the clear upward trend in average years of
  schooling across birth cohorts.
- Figure 
+ 
+\end_layout
+
+\begin_layout Standard
+Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:education_by_qob"
@@ -249,11 +253,48 @@ noprefix "false"
 
 \end_inset
 
- illustrates that quarter of birth systematically related to years of completed
- education only among those with less than 12 years of education.
+ illustrates that quarter of birth is systematically related to years of
+ completed education only among those with less than 12 years of education.
  This suggests that quarter of birth does not influence college or graduate
  schooling completion, but rather that the identifying variation comes from
  variation in the length of compulsory (and not further) education.
+\end_layout
+
+\begin_layout Section
+Ordinary least squares and instrumental variables estimates
+\end_layout
+
+\begin_layout Standard
+Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:mean_earnings_schooling"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ presents the average log weekly earnings and years of schooling for individuals
+ born in the first quarter of the year and in the last three quarters of
+ the year, respectively.
+ Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:ols_iv_estimates"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows both OLS, Wald and 2SLS estimates of log weekly on years of education.
+ The Wald estimate is based on a specification where an indicator for being
+ born in the first quarter of the year is used as an instrument for years
+ of schooling.
+ The 2SLS estimate is based on a specification where a full set of indicators
+ for year of birth and quarter of birth are used as instruments for years
+ of schooling.
 \end_layout
 
 \begin_layout Standard
@@ -343,8 +384,9 @@ The Quarterly Journal of Economics,
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset CommandInset include
-LatexCommand include
+LatexCommand input
 filename "../figures/illustrate_research_design.lyx"
 
 \end_inset
@@ -353,9 +395,32 @@ filename "../figures/illustrate_research_design.lyx"
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset CommandInset include
-LatexCommand include
+LatexCommand input
 filename "../figures/education_by_qob.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset CommandInset include
+LatexCommand input
+filename "../../build/tables/mean_earnings_schooling.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset CommandInset include
+LatexCommand input
+filename "../../build/tables/ols_iv_estimates.lyx"
 
 \end_inset
 

@@ -119,9 +119,9 @@ name "tab:mean_earnings_schooling"
 <lyxtabular version="3" rows="6" columns="4">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="20text%">
-<column alignment="center" valignment="top" width="25text%">
-<column alignment="center" valignment="top" width="25text%">
-<column alignment="center" valignment="top" width="25text%">
+<column alignment="center" valignment="top" width="20text%">
+<column alignment="center" valignment="top" width="20text%">
+<column alignment="center" valignment="top" width="20text%">
 <row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text

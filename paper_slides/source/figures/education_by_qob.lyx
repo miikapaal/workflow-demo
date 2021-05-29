@@ -77,6 +77,7 @@
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -141,7 +142,8 @@ Mean Years of Education by Quarter of Birth.
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename ../../../analysis/release/descriptive/education_by_qob.eps
-	scale 50
+	lyxscale 70
+	scale 55
 
 \end_inset
 
@@ -215,7 +217,8 @@ years of education
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename ../../../analysis/release/descriptive/education_by_qob_lessthan12.eps
-	scale 50
+	lyxscale 70
+	scale 55
 
 \end_inset
 
@@ -230,7 +233,8 @@ years of education
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename ../../../analysis/release/descriptive/education_by_qob_12plus.eps
-	scale 50
+	lyxscale 70
+	scale 55
 
 \end_inset
 
