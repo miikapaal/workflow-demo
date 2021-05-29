@@ -3,12 +3,12 @@ gslab_version: 4.1.1
 
 # Build Directories
 build:
-  estimation: build/prepare_data
+  estimation: build/estimation
   descriptive: build/descriptive
 
 # Source Directories
 source:
-  estimation: source/prepare_data
+  estimation: source/estimation
   descriptive: source/descriptive
 
 # Input Directories (will record contents)
