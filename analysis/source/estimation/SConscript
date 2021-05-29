@@ -5,9 +5,10 @@ build  = env['CONFIG']['global']['build']['estimation']
 source = env['CONFIG']['global']['source']['estimation']
 input  = env['CONFIG']['global']['input']
 
-env.BuildStata(target  = ['#%s/data.txt'          % build],
-               source  = ['#%s/iv_regressions.do' % source,
-                          '#%s/qob1.dta'          % input])
+env.BuildStata(target  = ['#%s/mean_earnings_schooling.txt' % build,
+                          '#%s/ols_iv_estimates.txt'        % build],
+               source  = ['#%s/ols_iv_estimates.do'         % source,
+                          '#%s/qob1.dta'                    % input])
 
 
 env.Install('#release', '#%s/' % build)
