@@ -1,5 +1,5 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -41,6 +41,8 @@
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -70,6 +72,7 @@
 \suppress_date false
 \justification true
 \use_refstyle 0
+\use_minted 0
 \index Index
 \shortcut idx
 \color #008000
@@ -82,7 +85,10 @@
 \tocdepth 2
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -96,15 +102,25 @@
 \begin_body
 
 \begin_layout Title
-Title
+Brief introduction to
+\emph on
+ 
+\begin_inset Quotes eld
+\end_inset
+
+GSLab
+\begin_inset Quotes erd
+\end_inset
+
+
+\emph default
+ workflow
 \end_layout
 
 \begin_layout Author
-Author 1 (Affiliation 1)
-\begin_inset Newline newline
-\end_inset
-
-Author 2 (Affiliation 2)
+Miika Päällysaho, 
+\emph on
+Stockholm University
 \end_layout
 
 \begin_layout Date
@@ -119,7 +135,7 @@ Author 2 (Affiliation 2)
 status open
 
 \begin_layout Plain Layout
-Motivation
+Introduction
 \end_layout
 
 \end_inset
@@ -133,164 +149,81 @@ Motivation
 
 \begin_deeper
 \begin_layout Itemize
-A
+Provide brief introduction to the 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+GSLab
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph default
+workflow
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Used in projects lead by Professors 
+\emph on
+Jesse Shapiro (Brown) 
+\emph default
+and 
+\emph on
+Matthew Gentzkow (Stanford)
 \end_layout
 
 \begin_layout Itemize
-B
-\end_layout
+RA manual: 
+\series bold
+\emph on
 
-\begin_layout Itemize
-C
+\begin_inset CommandInset href
+LatexCommand href
+name "gslab-econ/ra-manual"
+target "https://github.com/gslab-econ/ra-manual/wiki/Introduction"
+literal "false"
+
+\end_inset
+
+
+\series default
+\emph default
+.
 \end_layout
 
 \end_deeper
-\begin_layout Standard
-\begin_inset Separator parbreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-This Paper
-\end_layout
-
-\end_inset
-
-
-\begin_inset Separator latexpar
-\end_inset
-
-
+\begin_layout Itemize
+Focus here on useful tools for both faculty and PhD students
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-A
+Version control 
+\emph on
+(git)
 \end_layout
 
 \begin_layout Itemize
-B
+
+\emph on
+GitHub: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Platform for collaboration
 \end_layout
 
 \begin_layout Itemize
-C
+Same project template
 \end_layout
 
 \end_deeper
-\begin_layout Section
-Data
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Data
-\end_layout
-
-\end_inset
-
-
-\begin_inset Separator latexpar
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
 \begin_layout Itemize
-A
-\end_layout
-
-\begin_layout Itemize
-B
-\end_layout
-
-\begin_layout Itemize
-C
-\end_layout
-
-\end_deeper
-\begin_layout Section
-Results
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Figure
-\end_layout
-
-\end_inset
-
-
-\begin_inset Separator latexpar
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename ../../input/plot.eps
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator parbreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Conclusion
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Conclusion
-\end_layout
-
-\end_inset
-
-
-\begin_inset Separator latexpar
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-A
-\end_layout
-
-\begin_layout Itemize
-B
-\end_layout
-
-\begin_layout Itemize
-C
+Consistent coding style and project stucture
 \end_layout
 
 \end_deeper
@@ -300,17 +233,22 @@ status open
 
 \begin_layout Plain Layout
 
+
+\backslash
+rlap{
+\backslash
+noindent
+\backslash
+rule[-5ex]{0.2
+\backslash
+linewidth}{0.5pt}}
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-plain{Thank you!}
-\end_layout
-
-\begin_layout Plain Layout
-
+begin{tiny}
 \end_layout
 
 \end_inset
@@ -318,5 +256,426 @@ plain{Thank you!}
 
 \end_layout
 
+\begin_layout Standard
+
+\emph on
+Acknowledgements:
+\emph default
+ I thank...
+ for helpful comments.
+ Some of this material draws from similar slides created by Zane Kashner
+ (PhD student at Stanford GSB).
+ All errors are my own.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tiny}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Project stucture: 
+\emph on
+Git
+\emph default
+ & GitHub Template 1/2
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Version control using 
+\emph on
+Git 
+\emph default
+and GitHub
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Tracks changes and version histories of scripts and output files
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Common analysis template (see 
+\series bold
+\emph on
+
+\begin_inset CommandInset href
+LatexCommand href
+name "gslab-econ/template"
+target "https://github.com/gslab-econ/template"
+literal "false"
+
+\end_inset
+
+
+\series default
+\emph default
+)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Ensures all outputs are consistent with up-to-date versions of code scripts
+ and data files
+\end_layout
+
+\begin_layout Itemize
+Projects are portable across machines and collaborators
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\emph on
+SCons: 
+\emph default
+Build tool for executing scripts and tracking dependencies between scripts
+ and input/output files
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Off-the-shelf builders available for 
+\emph on
+R, Stata, Python, 
+\emph default
+and 
+\emph on
+MATLAB
+\end_layout
+
+\begin_layout Itemize
+Template for creating custom builders (for e.g.
+ 
+\emph on
+Julia
+\emph default
+)
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Project stucture: 
+\emph on
+Git
+\emph default
+ & GitHub Template 2/2
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Main modules: 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+Prepare Data
+\begin_inset Quotes erd
+\end_inset
+
+
+\emph default
+, 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+Analysis
+\begin_inset Quotes erd
+\end_inset
+
+
+\emph default
+, and 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+Paper/Slides
+\begin_inset Quotes erd
+\end_inset
+
+
+\emph default
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In each module: 
+\emph on
+source
+\emph default
+ (for code), and 
+\emph on
+build
+\emph default
+ (for outputs)
+\end_layout
+
+\begin_layout Itemize
+Code used across scripts (e.g.
+ Stata 
+\emph on
+ado-
+\emph default
+files) stored in libraries (
+\emph on
+source/lib
+\emph default
+) to eliminate repetition and reduce human errors.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+SCons 
+\emph default
+scripts for executing analysis scripts and defining dependencies between
+ scripts and input/output files
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Track and version processed data using 
+\emph on
+Git's large file system
+\end_layout
+
+\begin_layout Itemize
+Use e.g.
+ Dropbox for storing large raw data files
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Workflow in a nutshell 1/2
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+On GitHub, use the 
+\emph on
+master
+\emph default
+ branch as the benchmark that is used as the basis of further work
+\end_layout
+
+\begin_layout Itemize
+For each well-defined task, create an 
+\emph on
+issue
+\emph default
+ and a new branch (
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+issueXXX_[alias]
+\begin_inset Quotes erd
+\end_inset
+
+)
+\emph default
+ for work related to the issue
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Assign team member(s) to work on the issue
+\end_layout
+
+\begin_layout Itemize
+Use the issue comment thread for communication
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Once the goals set for the issue are completed, open a 
+\emph on
+pull request
+\emph default
+ for reviewing changes made to code and outputs.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Assigned team members can ask other members to peer review changes
+\end_layout
+
+\begin_layout Itemize
+Once peer review is complete, issue branch is merged to the 
+\emph on
+master
+\emph default
+ branch
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Workflow in a nutshell 2/2
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+When paper draft is prepared for circulation/submission, complete a round
+ of supervised 
+\begin_inset Quotes eld
+\end_inset
+
+paper production
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Open separate issues for well-defined tasks, including:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Proof-reading
+\end_layout
+
+\begin_layout Itemize
+Fact-checking
+\end_layout
+
+\begin_layout Itemize
+Check/update references
+\end_layout
+
+\begin_layout Itemize
+Check sample and variable definitions
+\end_layout
+
+\begin_layout Itemize
+etc.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Track progress of different tasks:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+to-do, in progress, in review, done.
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
 \end_body
 \end_document
