@@ -8,18 +8,29 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit b02e51d5a0b9c1090cda24367c2d68c7f4fb131b
-Author: David Ritzwoller <David.Ritzwoller@gmail.com>
-Date:   Wed Jan 29 21:06:58 2020 -0800
+commit eaf3216c48227490c0c60a7b0935636c27e54fa1
+Author: Miika Päällysaho <miika.paallysaho@ne.su.se>
+Date:   Sat May 29 23:41:35 2021 +0200
 
-    #110 add Loader
+    #1 Finish sketching script for OLS/IV estimates
 
 
 Files changed since last commit:
 
 
-analysis/release/descriptive/plot.eps
-analysis/release/descriptive/sconscript_descriptive.log
+analysis/config_global.yaml
+analysis/release/descriptive/sconscript.log
+analysis/source/estimation/SConscript
+analysis/source/estimation/iv_regressions.do
+paper_slides/input/plot.eps
+paper_slides/input/table.txt
+paper_slides/source/figures/education_by_qob.lyx
+paper_slides/source/figures/illustrate_research_design.lyx
+paper_slides/source/paper/paper.lyx
+paper_slides/source/tables/SConscript
+paper_slides/source/tables/mean_earnings_schooling.lyx
+paper_slides/source/tables/ols_iv_estimates.lyx
+paper_slides/source/talk/slides.lyx
 
 ===================================
 
@@ -27,77 +38,122 @@ analysis/release/descriptive/sconscript_descriptive.log
 
 ===================================
 ./config_user.yaml:
-   modified on: 29 Jan 2020 21:07:56
-   size of file: 646
+   modified on: 13 Jul 2020 20:21:43
+   size of file: 707
 ./run.py:
-   modified on: 23 Aug 2019 16:10:40
+   modified on: 26 May 2021 18:12:51
    size of file: 449
 ./state_of_repo.log:
-   modified on: 29 Jan 2020 21:08:02
-   size of file: 525
+   modified on: 29 May 2021 23:47:21
+   size of file: 997
 ./SConstruct:
-   modified on: 23 Aug 2019 16:10:40
-   size of file: 1878
+   modified on: 26 May 2021 18:38:25
+   size of file: 1872
+./state_of_input.log:
+   modified on: 29 May 2021 23:46:49
+   size of file: 143
 ./config_global.yaml:
-   modified on: 23 Aug 2019 16:10:40
-   size of file: 1264
+   modified on: 29 May 2021 23:45:46
+   size of file: 1255
 ./sconstruct.log:
-   modified on: 29 Jan 2020 21:08:02
-   size of file: 502
-./source/prepare_data/create_data.m:
-   modified on: 23 Aug 2019 16:10:40
-   size of file: 202
-./source/prepare_data/create_data.sh:
-   modified on: 23 Aug 2019 16:10:40
-   size of file: 81
-./source/prepare_data/create_data.do:
-   modified on: 23 Aug 2019 16:10:40
-   size of file: 262
-./source/prepare_data/SConscript:
-   modified on: 23 Aug 2019 16:10:40
-   size of file: 1126
-./source/prepare_data/create_data.py:
-   modified on: 23 Aug 2019 16:10:40
-   size of file: 260
-./source/prepare_data/create_data.r:
-   modified on: 23 Aug 2019 16:10:40
-   size of file: 249
-./source/descriptive/descriptive.py:
-   modified on: 23 Aug 2019 16:10:40
-   size of file: 548
+   modified on: 29 May 2021 23:47:21
+   size of file: 809
+./input/qob1.dta:
+   modified on: 20 Jan 2017 13:50:42
+   size of file: 2307327
+./source/estimation/ols_iv_estimates.do:
+   modified on: 29 May 2021 23:19:41
+   size of file: 2452
+./source/estimation/SConscript:
+   modified on: 29 May 2021 23:46:36
+   size of file: 517
 ./source/descriptive/SConscript:
-   modified on: 23 Aug 2019 16:10:40
-   size of file: 501
+   modified on: 26 May 2021 21:38:50
+   size of file: 801
+./source/descriptive/illustrate_research_design.do:
+   modified on: 26 May 2021 21:46:13
+   size of file: 2202
 ./release/state_of_repo.log:
-   modified on: 23 Aug 2019 16:10:40
-   size of file: 2874
+   modified on: 29 May 2021 23:45:59
+   size of file: 4166
+./release/state_of_input.log:
+   modified on: 29 May 2021 23:44:07
+   size of file: 143
 ./release/sconstruct.log:
-   modified on: 23 Aug 2019 16:10:40
-   size of file: 306
+   modified on: 29 May 2021 23:45:59
+   size of file: 9510
+./release/estimation/ols_iv_estimates.txt:
+   modified on: 29 May 2021 23:47:21
+   size of file: 146
+./release/estimation/sconscript.log:
+   modified on: 29 May 2021 23:47:21
+   size of file: 3861
+./release/estimation/mean_earnings_schooling.txt:
+   modified on: 29 May 2021 23:46:53
+   size of file: 130
 ./release/descriptive/sconscript_descriptive.log:
-   modified on: 29 Jan 2020 21:08:02
+   modified on: 26 May 2021 18:12:51
    size of file: 96
-./release/descriptive/plot.eps:
-   modified on: 29 Jan 2020 21:08:02
-   size of file: 12351
-./release/descriptive/table.txt:
-   modified on: 29 Jan 2020 21:08:01
-   size of file: 39
-./release/lg/data.txt:
-   modified on: 29 Jan 2020 21:07:57
-   size of file: 1988897
-./build/prepare_data/sconscript_create_data.log:
-   modified on: 29 Jan 2020 21:07:57
-   size of file: 96
-./build/prepare_data/data.txt:
-   modified on: 29 Jan 2020 21:07:57
-   size of file: 1988897
-./build/descriptive/sconscript_descriptive.log:
-   modified on: 29 Jan 2020 21:08:02
-   size of file: 96
-./build/descriptive/plot.eps:
-   modified on: 29 Jan 2020 21:08:02
-   size of file: 12351
-./build/descriptive/table.txt:
-   modified on: 29 Jan 2020 21:08:01
-   size of file: 39
+./release/descriptive/education_by_yob_qob.eps:
+   modified on: 29 May 2021 23:46:50
+   size of file: 26123
+./release/descriptive/education_by_qob_12plus.eps:
+   modified on: 29 May 2021 23:46:53
+   size of file: 15872
+./release/descriptive/education_by_qob_lessthan12.png:
+   modified on: 29 May 2021 23:46:52
+   size of file: 14002
+./release/descriptive/education_by_qob.eps:
+   modified on: 29 May 2021 23:46:52
+   size of file: 14824
+./release/descriptive/education_by_qob_lessthan12.eps:
+   modified on: 29 May 2021 23:46:52
+   size of file: 14804
+./release/descriptive/education_by_qob.png:
+   modified on: 29 May 2021 23:46:52
+   size of file: 13681
+./release/descriptive/sconscript.log:
+   modified on: 29 May 2021 23:46:53
+   size of file: 4526
+./release/descriptive/education_by_yob_qob.png:
+   modified on: 29 May 2021 23:46:52
+   size of file: 31160
+./release/descriptive/education_by_qob_12plus.png:
+   modified on: 29 May 2021 23:46:53
+   size of file: 15066
+./build/estimation/ols_iv_estimates.txt:
+   modified on: 29 May 2021 23:47:21
+   size of file: 146
+./build/estimation/sconscript.log:
+   modified on: 29 May 2021 23:47:21
+   size of file: 3861
+./build/estimation/mean_earnings_schooling.txt:
+   modified on: 29 May 2021 23:46:53
+   size of file: 130
+./build/descriptive/education_by_yob_qob.eps:
+   modified on: 29 May 2021 23:46:50
+   size of file: 26123
+./build/descriptive/education_by_qob_12plus.eps:
+   modified on: 29 May 2021 23:46:53
+   size of file: 15872
+./build/descriptive/education_by_qob_lessthan12.png:
+   modified on: 29 May 2021 23:46:52
+   size of file: 14002
+./build/descriptive/education_by_qob.eps:
+   modified on: 29 May 2021 23:46:52
+   size of file: 14824
+./build/descriptive/education_by_qob_lessthan12.eps:
+   modified on: 29 May 2021 23:46:52
+   size of file: 14804
+./build/descriptive/education_by_qob.png:
+   modified on: 29 May 2021 23:46:52
+   size of file: 13681
+./build/descriptive/sconscript.log:
+   modified on: 29 May 2021 23:46:53
+   size of file: 4526
+./build/descriptive/education_by_yob_qob.png:
+   modified on: 29 May 2021 23:46:52
+   size of file: 31160
+./build/descriptive/education_by_qob_12plus.png:
+   modified on: 29 May 2021 23:46:53
+   size of file: 15066

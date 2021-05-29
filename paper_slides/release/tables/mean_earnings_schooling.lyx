@@ -1,5 +1,5 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -21,6 +21,8 @@
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -51,6 +53,7 @@
 \suppress_date false
 \justification true
 \use_refstyle 0
+\use_minted 0
 \index Index
 \shortcut idx
 \color #008000
@@ -63,7 +66,10 @@
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -88,10 +94,10 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Table Title
+Mean Earnings and Schooling for 1980 Census – Men Born 1930–1939
 \begin_inset CommandInset label
 LatexCommand label
-name "tab:table"
+name "tab:mean_earnings_schooling"
 
 \end_inset
 
@@ -110,10 +116,12 @@ name "tab:table"
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="5" columns="2">
+<lyxtabular version="3" rows="6" columns="4">
 <features tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="20text%">
+<column alignment="center" valignment="top" width="20text%">
+<column alignment="center" valignment="top" width="20text%">
+<column alignment="center" valignment="top" width="20text%">
 <row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
@@ -128,7 +136,62 @@ name "tab:table"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Count
+(1) 
+\begin_inset Newline newline
+\end_inset
+
+Born in 
+\begin_inset Newline newline
+\end_inset
+
+1st quarter 
+\begin_inset Newline newline
+\end_inset
+
+of year
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2) 
+\begin_inset Newline newline
+\end_inset
+
+Born in 
+\begin_inset Newline newline
+\end_inset
+
+2nd, 3rd or 4th 
+\begin_inset Newline newline
+\end_inset
+
+quarter of year
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(3) 
+\begin_inset Newline newline
+\end_inset
+
+Difference 
+\begin_inset Newline newline
+\end_inset
+
+(std.
+ error) 
+\begin_inset Newline newline
+\end_inset
+
+(2)-(1)
 \end_layout
 
 \end_inset
@@ -139,7 +202,7 @@ Count
 \begin_inset Text
 
 \begin_layout Plain Layout
-Mean
+Log Weekly Earnings
 \end_layout
 
 \end_inset
@@ -148,7 +211,25 @@ Mean
 \begin_inset Text
 
 \begin_layout Plain Layout
-#2#
+5.8916
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.9027
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0111
 \end_layout
 
 \end_inset
@@ -159,7 +240,7 @@ Mean
 \begin_inset Text
 
 \begin_layout Plain Layout
-SD
+
 \end_layout
 
 \end_inset
@@ -168,7 +249,25 @@ SD
 \begin_inset Text
 
 \begin_layout Plain Layout
-#2#
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(0.0027)
 \end_layout
 
 \end_inset
@@ -179,7 +278,7 @@ SD
 \begin_inset Text
 
 \begin_layout Plain Layout
-Max
+Years of Education
 \end_layout
 
 \end_inset
@@ -188,27 +287,101 @@ Max
 \begin_inset Text
 
 \begin_layout Plain Layout
-#0#
+12.6881
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+12.7969
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.1088
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Main
+
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-#0#
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(0.0132)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Observations
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+81671
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+247838
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+329509
 \end_layout
 
 \end_inset
@@ -232,7 +405,8 @@ Main
 \begin_layout Plain Layout
 
 \size footnotesize
-Note: Table notes
+Note: This table replicates columns (1) and (2) as well as part of column
+ (3) of Table III of Angrist and Kruger (1991).
 \end_layout
 
 \end_inset

@@ -1,5 +1,15 @@
 Import('env')
 
-env.Tablefill(target = ['#%s/table.lyx' % env['CONFIG']['global']['build']['tables']],
-              source = ['#%s/table.lyx' % env['CONFIG']['global']['source']['tables'],
-                        '#%s/table.txt' % env['CONFIG']['global']['input']])
+build   = env['CONFIG']['global']['build']['tables']
+source  = env['CONFIG']['global']['source']['tables']
+input   = env['CONFIG']['global']['input']
+
+env.Tablefill(target = ['#%s/mean_earnings_schooling.lyx' % build],
+              source = ['#%s/mean_earnings_schooling.lyx' % source,
+                        '#%s/mean_earnings_schooling.txt' % input])
+
+env.Tablefill(target = ['#%s/ols_iv_estimates.lyx' % build],
+              source = ['#%s/ols_iv_estimates.lyx' % source,
+                        '#%s/ols_iv_estimates.txt' % input])
+
+env.Install('#release', '#%s/' % build)

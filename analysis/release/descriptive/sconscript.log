@@ -1,0 +1,140 @@
+*** Builder log created: {2021-05-29 23:46:49}
+*** Builder log completed: {2021-05-29 23:46:53}
+
+  ___  ____  ____  ____  ____ (R)
+ /__    /   ____/   /   ____/
+___/   /   /___/   /   /___/   16.1   Copyright 1985-2019 StataCorp LLC
+  Statistics/Data analysis            StataCorp
+                                      4905 Lakeway Drive
+     Special Edition                  College Station, Texas 77845 USA
+                                      800-STATA-PC        https://www.stata.com
+                                      979-696-4600        stata@stata.com
+                                      979-696-4601 (fax)
+
+Stata license: Unlimited-user network, expiring 15 Apr 2022
+Serial number: 401609206143
+  Licensed to: Miika Päällysaho
+               
+
+Notes:
+      1. Stata is running in batch mode.
+      2. Unicode is supported; see help unicode_advice.
+      3. Maximum number of variables is set to 5,000; see help set_maxvar.
+
+. do "source/descriptive/illustrate_research_design.do" 
+
+. clear all
+
+. set more off
+
+. set gr off
+
+. version
+version 16.1
+
+. 
+. clear
+
+. use input/qob1.dta
+
+. 
+. gen yob1=1900+yob+(qob-1)/4
+
+. 
+. * Mean years of education by YOB and QOB
+. preserve
+
+.   gcollapse (mean) educ qob, by(yob1)
+
+.   twoway  connected educ yob1 ///
+>     , mlabel(qob) ytitle("Years of Completed Education")  ///
+>     xtitle("Year of birth") graphregion(color(white))     ///
+>     ylabel(, angle(horizontal))
+
+.   graph export "build/descriptive/education_by_yob_qob.eps", replace
+(note: file build/descriptive/education_by_yob_qob.eps not found)
+(file build/descriptive/education_by_yob_qob.eps written in EPS format)
+
+.   graph export "build/descriptive/education_by_yob_qob.png", replace
+(note: file build/descriptive/education_by_yob_qob.png not found)
+(file build/descriptive/education_by_yob_qob.png written in PNG format)
+
+. restore
+
+. 
+. * Mean years of education by QOB
+. preserve
+
+.   gcollapse (mean) educ, by(qob)
+
+.   twoway ///
+>     (bar educ qob, barw(.6) base(12.65)) ///
+>     (scatter educ qob, msym(none) mlab(educ) mlabpos(12) mlabcolor(black) mla
+> bsize(vsmall))       ///
+>     , graphregion(color(white)) ytitle("Years of Completed Education") xtitle
+> ("Quarter of Birth") ///
+>     ylabel(, angle(hor)) legend(off)
+
+.   graph export "build/descriptive/education_by_qob.eps", replace
+(note: file build/descriptive/education_by_qob.eps not found)
+(file build/descriptive/education_by_qob.eps written in EPS format)
+
+.   graph export "build/descriptive/education_by_qob.png", replace
+(note: file build/descriptive/education_by_qob.png not found)
+(file build/descriptive/education_by_qob.png written in PNG format)
+
+. restore
+
+. 
+. * Mean years of education by QOB, only those with <12 years of education
+. preserve
+
+.   gcollapse  (mean) educ if educ<12, by(qob)
+
+.   twoway ///
+>     (bar educ qob, barw(.6) base(8.55)) ///
+>     (scatter educ qob, msym(none) mlab( educ) mlabpos(12) mlabcolor(black) ml
+> absize(vsmall))      ///
+>     , graphregion(color(white)) ytitle("Years of Completed Education") xtitle
+> ("Quarter of Birth") ///
+>     ylabel(, angle(hor)) legend(off)
+
+.   graph export "build/descriptive/education_by_qob_lessthan12.eps", replace
+(note: file build/descriptive/education_by_qob_lessthan12.eps not found)
+(file build/descriptive/education_by_qob_lessthan12.eps written in EPS format)
+
+.   graph export "build/descriptive/education_by_qob_lessthan12.png", replace
+(note: file build/descriptive/education_by_qob_lessthan12.png not found)
+(file build/descriptive/education_by_qob_lessthan12.png written in PNG format)
+
+. restore
+
+. 
+. * Mean years of education by QOB, only those with more than 12+ years of educ
+> ation
+. preserve
+
+.   collapse (mean) educ if educ>=12, by(qob)
+
+.   twoway  (bar educ qob, barw(.6) base(13.97)) ///
+>     (scatter educ qob, msym(none) mlab(educ) mlabpos(12) mlabcolor(black) mla
+> bsize(vsmall)), ///
+>     graphregion(color(white)) ytitle("Years of Completed Education") xtitle("
+> Quarter of Birth") ///
+>     ylabel(, angle(hor)) legend(off)
+
+.   graph export "build/descriptive/education_by_qob_12plus.eps", replace
+(note: file build/descriptive/education_by_qob_12plus.eps not found)
+(file build/descriptive/education_by_qob_12plus.eps written in EPS format)
+
+.   graph export "build/descriptive/education_by_qob_12plus.png", replace
+(note: file build/descriptive/education_by_qob_12plus.png not found)
+(file build/descriptive/education_by_qob_12plus.png written in PNG format)
+
+. restore
+
+. 
+. clear
+
+. 
+end of do-file
