@@ -1,5 +1,5 @@
-*** Builder log created: {2021-05-26 21:46:22}
-*** Builder log completed: {2021-05-26 21:46:26}
+*** Builder log created: {2021-05-29 23:46:49}
+*** Builder log completed: {2021-05-29 23:46:53}
 
   ___  ____  ____  ____  ____ (R)
  /__    /   ____/   /   ____/
@@ -76,9 +76,11 @@ version 16.1
 >     ylabel(, angle(hor)) legend(off)
 
 .   graph export "build/descriptive/education_by_qob.eps", replace
+(note: file build/descriptive/education_by_qob.eps not found)
 (file build/descriptive/education_by_qob.eps written in EPS format)
 
 .   graph export "build/descriptive/education_by_qob.png", replace
+(note: file build/descriptive/education_by_qob.png not found)
 (file build/descriptive/education_by_qob.png written in PNG format)
 
 . restore
