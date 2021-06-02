@@ -673,6 +673,22 @@ to-do, in progress, in review, done.
 \end_layout
 
 \end_deeper
+\begin_layout Itemize
+For details, see the 
+\series bold
+\emph on
+
+\begin_inset CommandInset href
+LatexCommand href
+name "\"GSLab\" RA manual"
+target "https://github.com/gslab-econ/ra-manual/wiki/Production"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
 \end_deeper
 \end_deeper
 \end_body
