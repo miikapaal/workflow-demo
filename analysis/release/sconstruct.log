@@ -1,17 +1,15 @@
-*** New build: {2021-05-29 23:46:49} ***
+*** New build: {2021-06-02 15:32:43} ***
 scons: done reading SConscript files.
 scons: Building targets ...
-build_stata(["build/descriptive/education_by_yob_qob.eps", "build/descriptive/education_by_yob_qob.png", "build/descriptive/education_by_qob_lessthan12.eps", "build/descriptive/education_by_qob_lessthan12.png", "build/descriptive/education_by_qob_12plus.eps", "build/descriptive/education_by_qob_12plus.png"], ["source/descriptive/illustrate_research_design.do", "input/qob1.dta"])
-build_stata(["build/estimation/mean_earnings_schooling.txt", "build/estimation/ols_iv_estimates.txt"], ["source/estimation/ols_iv_estimates.do", "input/qob1.dta"])
-Install directory: "build/descriptive" as "release/descriptive"
+build_stata(["build/estimation/mean_earnings_schooling.txt", "build/estimation/ols_iv_estimates.txt"], ["source/estimation/ols_iv_estimates.do", "raw/qob1.dta"])
 Install directory: "build/estimation" as "release/estimation"
 scons: done building targets.
-*** Build completed: {2021-05-29 23:47:21} ***
+*** Build completed: {2021-06-02 15:33:24} ***
  
  
 ./build/estimation/sconscript.log
-*** Builder log created: {2021-05-29 23:46:53}
-*** Builder log completed: {2021-05-29 23:47:21}
+*** Builder log created: {2021-06-02 15:32:43}
+*** Builder log completed: {2021-06-02 15:33:23}
 
   ___  ____  ____  ____  ____ (R)
  /__    /   ____/   /   ____/
@@ -42,7 +40,7 @@ Notes:
 . set gr off
 
 . 
-. local infolder  "input"
+. local infolder  "raw"
 
 . local outfolder "build/estimation"
 
@@ -72,11 +70,11 @@ Notes:
 .   qui sum    `var' if qob1==1
   3.   local mean_`var'_qob1     = r(mean)
   4.   local  obs_`var'_qob1     = r(N)
-  5.   
+  5. 
 .   qui sum    `var' if qob234==1
   6.   local mean_`var'_qob234   = r(mean)
   7.   local  obs_`var'_qob234   = r(N)
-  8.   
+  8. 
 .   qui reg    `var' qob234
   9.   local diff_`var'          = e(b)[1,1]
  10.   local diff_`var'_se       = sqrt(e(V)[1,1])
@@ -122,7 +120,7 @@ Notes:
 . local wald_se     = sqrt(e(V)[1,1])
 
 . 
-. qui reg educ qob1
+. qui reg educ qob1, robust
 
 . local first_coef  = e(b)[1,1]
 
@@ -174,7 +172,7 @@ Notes:
 
 . file write  f (`overid_dof')  _n
 
-. file write  f (`overid_pval') 
+. file write  f (`overid_pval')
 
 . file close  f
 
@@ -184,8 +182,8 @@ Notes:
 . 
 end of do-file
 ./release/estimation/sconscript.log
-*** Builder log created: {2021-05-29 23:46:53}
-*** Builder log completed: {2021-05-29 23:47:21}
+*** Builder log created: {2021-06-02 15:32:43}
+*** Builder log completed: {2021-06-02 15:33:23}
 
   ___  ____  ____  ____  ____ (R)
  /__    /   ____/   /   ____/
@@ -216,7 +214,7 @@ Notes:
 . set gr off
 
 . 
-. local infolder  "input"
+. local infolder  "raw"
 
 . local outfolder "build/estimation"
 
@@ -246,11 +244,11 @@ Notes:
 .   qui sum    `var' if qob1==1
   3.   local mean_`var'_qob1     = r(mean)
   4.   local  obs_`var'_qob1     = r(N)
-  5.   
+  5. 
 .   qui sum    `var' if qob234==1
   6.   local mean_`var'_qob234   = r(mean)
   7.   local  obs_`var'_qob234   = r(N)
-  8.   
+  8. 
 .   qui reg    `var' qob234
   9.   local diff_`var'          = e(b)[1,1]
  10.   local diff_`var'_se       = sqrt(e(V)[1,1])
@@ -296,7 +294,7 @@ Notes:
 . local wald_se     = sqrt(e(V)[1,1])
 
 . 
-. qui reg educ qob1
+. qui reg educ qob1, robust
 
 . local first_coef  = e(b)[1,1]
 
@@ -348,291 +346,9 @@ Notes:
 
 . file write  f (`overid_dof')  _n
 
-. file write  f (`overid_pval') 
+. file write  f (`overid_pval')
 
 . file close  f
-
-. 
-. clear
-
-. 
-end of do-file
-./build/descriptive/sconscript.log
-*** Builder log created: {2021-05-29 23:46:49}
-*** Builder log completed: {2021-05-29 23:46:53}
-
-  ___  ____  ____  ____  ____ (R)
- /__    /   ____/   /   ____/
-___/   /   /___/   /   /___/   16.1   Copyright 1985-2019 StataCorp LLC
-  Statistics/Data analysis            StataCorp
-                                      4905 Lakeway Drive
-     Special Edition                  College Station, Texas 77845 USA
-                                      800-STATA-PC        https://www.stata.com
-                                      979-696-4600        stata@stata.com
-                                      979-696-4601 (fax)
-
-Stata license: Unlimited-user network, expiring 15 Apr 2022
-Serial number: 401609206143
-  Licensed to: Miika Päällysaho
-               
-
-Notes:
-      1. Stata is running in batch mode.
-      2. Unicode is supported; see help unicode_advice.
-      3. Maximum number of variables is set to 5,000; see help set_maxvar.
-
-. do "source/descriptive/illustrate_research_design.do" 
-
-. clear all
-
-. set more off
-
-. set gr off
-
-. version
-version 16.1
-
-. 
-. clear
-
-. use input/qob1.dta
-
-. 
-. gen yob1=1900+yob+(qob-1)/4
-
-. 
-. * Mean years of education by YOB and QOB
-. preserve
-
-.   gcollapse (mean) educ qob, by(yob1)
-
-.   twoway  connected educ yob1 ///
->     , mlabel(qob) ytitle("Years of Completed Education")  ///
->     xtitle("Year of birth") graphregion(color(white))     ///
->     ylabel(, angle(horizontal))
-
-.   graph export "build/descriptive/education_by_yob_qob.eps", replace
-(note: file build/descriptive/education_by_yob_qob.eps not found)
-(file build/descriptive/education_by_yob_qob.eps written in EPS format)
-
-.   graph export "build/descriptive/education_by_yob_qob.png", replace
-(note: file build/descriptive/education_by_yob_qob.png not found)
-(file build/descriptive/education_by_yob_qob.png written in PNG format)
-
-. restore
-
-. 
-. * Mean years of education by QOB
-. preserve
-
-.   gcollapse (mean) educ, by(qob)
-
-.   twoway ///
->     (bar educ qob, barw(.6) base(12.65)) ///
->     (scatter educ qob, msym(none) mlab(educ) mlabpos(12) mlabcolor(black) mla
-> bsize(vsmall))       ///
->     , graphregion(color(white)) ytitle("Years of Completed Education") xtitle
-> ("Quarter of Birth") ///
->     ylabel(, angle(hor)) legend(off)
-
-.   graph export "build/descriptive/education_by_qob.eps", replace
-(note: file build/descriptive/education_by_qob.eps not found)
-(file build/descriptive/education_by_qob.eps written in EPS format)
-
-.   graph export "build/descriptive/education_by_qob.png", replace
-(note: file build/descriptive/education_by_qob.png not found)
-(file build/descriptive/education_by_qob.png written in PNG format)
-
-. restore
-
-. 
-. * Mean years of education by QOB, only those with <12 years of education
-. preserve
-
-.   gcollapse  (mean) educ if educ<12, by(qob)
-
-.   twoway ///
->     (bar educ qob, barw(.6) base(8.55)) ///
->     (scatter educ qob, msym(none) mlab( educ) mlabpos(12) mlabcolor(black) ml
-> absize(vsmall))      ///
->     , graphregion(color(white)) ytitle("Years of Completed Education") xtitle
-> ("Quarter of Birth") ///
->     ylabel(, angle(hor)) legend(off)
-
-.   graph export "build/descriptive/education_by_qob_lessthan12.eps", replace
-(note: file build/descriptive/education_by_qob_lessthan12.eps not found)
-(file build/descriptive/education_by_qob_lessthan12.eps written in EPS format)
-
-.   graph export "build/descriptive/education_by_qob_lessthan12.png", replace
-(note: file build/descriptive/education_by_qob_lessthan12.png not found)
-(file build/descriptive/education_by_qob_lessthan12.png written in PNG format)
-
-. restore
-
-. 
-. * Mean years of education by QOB, only those with more than 12+ years of educ
-> ation
-. preserve
-
-.   collapse (mean) educ if educ>=12, by(qob)
-
-.   twoway  (bar educ qob, barw(.6) base(13.97)) ///
->     (scatter educ qob, msym(none) mlab(educ) mlabpos(12) mlabcolor(black) mla
-> bsize(vsmall)), ///
->     graphregion(color(white)) ytitle("Years of Completed Education") xtitle("
-> Quarter of Birth") ///
->     ylabel(, angle(hor)) legend(off)
-
-.   graph export "build/descriptive/education_by_qob_12plus.eps", replace
-(note: file build/descriptive/education_by_qob_12plus.eps not found)
-(file build/descriptive/education_by_qob_12plus.eps written in EPS format)
-
-.   graph export "build/descriptive/education_by_qob_12plus.png", replace
-(note: file build/descriptive/education_by_qob_12plus.png not found)
-(file build/descriptive/education_by_qob_12plus.png written in PNG format)
-
-. restore
-
-. 
-. clear
-
-. 
-end of do-file
-./release/descriptive/sconscript.log
-*** Builder log created: {2021-05-29 23:46:49}
-*** Builder log completed: {2021-05-29 23:46:53}
-
-  ___  ____  ____  ____  ____ (R)
- /__    /   ____/   /   ____/
-___/   /   /___/   /   /___/   16.1   Copyright 1985-2019 StataCorp LLC
-  Statistics/Data analysis            StataCorp
-                                      4905 Lakeway Drive
-     Special Edition                  College Station, Texas 77845 USA
-                                      800-STATA-PC        https://www.stata.com
-                                      979-696-4600        stata@stata.com
-                                      979-696-4601 (fax)
-
-Stata license: Unlimited-user network, expiring 15 Apr 2022
-Serial number: 401609206143
-  Licensed to: Miika Päällysaho
-               
-
-Notes:
-      1. Stata is running in batch mode.
-      2. Unicode is supported; see help unicode_advice.
-      3. Maximum number of variables is set to 5,000; see help set_maxvar.
-
-. do "source/descriptive/illustrate_research_design.do" 
-
-. clear all
-
-. set more off
-
-. set gr off
-
-. version
-version 16.1
-
-. 
-. clear
-
-. use input/qob1.dta
-
-. 
-. gen yob1=1900+yob+(qob-1)/4
-
-. 
-. * Mean years of education by YOB and QOB
-. preserve
-
-.   gcollapse (mean) educ qob, by(yob1)
-
-.   twoway  connected educ yob1 ///
->     , mlabel(qob) ytitle("Years of Completed Education")  ///
->     xtitle("Year of birth") graphregion(color(white))     ///
->     ylabel(, angle(horizontal))
-
-.   graph export "build/descriptive/education_by_yob_qob.eps", replace
-(note: file build/descriptive/education_by_yob_qob.eps not found)
-(file build/descriptive/education_by_yob_qob.eps written in EPS format)
-
-.   graph export "build/descriptive/education_by_yob_qob.png", replace
-(note: file build/descriptive/education_by_yob_qob.png not found)
-(file build/descriptive/education_by_yob_qob.png written in PNG format)
-
-. restore
-
-. 
-. * Mean years of education by QOB
-. preserve
-
-.   gcollapse (mean) educ, by(qob)
-
-.   twoway ///
->     (bar educ qob, barw(.6) base(12.65)) ///
->     (scatter educ qob, msym(none) mlab(educ) mlabpos(12) mlabcolor(black) mla
-> bsize(vsmall))       ///
->     , graphregion(color(white)) ytitle("Years of Completed Education") xtitle
-> ("Quarter of Birth") ///
->     ylabel(, angle(hor)) legend(off)
-
-.   graph export "build/descriptive/education_by_qob.eps", replace
-(note: file build/descriptive/education_by_qob.eps not found)
-(file build/descriptive/education_by_qob.eps written in EPS format)
-
-.   graph export "build/descriptive/education_by_qob.png", replace
-(note: file build/descriptive/education_by_qob.png not found)
-(file build/descriptive/education_by_qob.png written in PNG format)
-
-. restore
-
-. 
-. * Mean years of education by QOB, only those with <12 years of education
-. preserve
-
-.   gcollapse  (mean) educ if educ<12, by(qob)
-
-.   twoway ///
->     (bar educ qob, barw(.6) base(8.55)) ///
->     (scatter educ qob, msym(none) mlab( educ) mlabpos(12) mlabcolor(black) ml
-> absize(vsmall))      ///
->     , graphregion(color(white)) ytitle("Years of Completed Education") xtitle
-> ("Quarter of Birth") ///
->     ylabel(, angle(hor)) legend(off)
-
-.   graph export "build/descriptive/education_by_qob_lessthan12.eps", replace
-(note: file build/descriptive/education_by_qob_lessthan12.eps not found)
-(file build/descriptive/education_by_qob_lessthan12.eps written in EPS format)
-
-.   graph export "build/descriptive/education_by_qob_lessthan12.png", replace
-(note: file build/descriptive/education_by_qob_lessthan12.png not found)
-(file build/descriptive/education_by_qob_lessthan12.png written in PNG format)
-
-. restore
-
-. 
-. * Mean years of education by QOB, only those with more than 12+ years of educ
-> ation
-. preserve
-
-.   collapse (mean) educ if educ>=12, by(qob)
-
-.   twoway  (bar educ qob, barw(.6) base(13.97)) ///
->     (scatter educ qob, msym(none) mlab(educ) mlabpos(12) mlabcolor(black) mla
-> bsize(vsmall)), ///
->     graphregion(color(white)) ytitle("Years of Completed Education") xtitle("
-> Quarter of Birth") ///
->     ylabel(, angle(hor)) legend(off)
-
-.   graph export "build/descriptive/education_by_qob_12plus.eps", replace
-(note: file build/descriptive/education_by_qob_12plus.eps not found)
-(file build/descriptive/education_by_qob_12plus.eps written in EPS format)
-
-.   graph export "build/descriptive/education_by_qob_12plus.png", replace
-(note: file build/descriptive/education_by_qob_12plus.png not found)
-(file build/descriptive/education_by_qob_12plus.png written in PNG format)
-
-. restore
 
 . 
 . clear

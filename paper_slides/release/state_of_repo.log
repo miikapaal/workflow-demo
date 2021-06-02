@@ -8,20 +8,24 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit b2f3ac5d8144785c5b75c7c949130a268396aeb0
+commit eefafe16d028750bc0ca6d7faeb3dd3f22c694cb
 Author: Miika Päällysaho <miika.paallysaho@ne.su.se>
-Date:   Sat May 29 23:52:12 2021 +0200
+Date:   Wed Jun 2 15:35:07 2021 +0200
 
-    #1 Update paper_slides/input
+    #3 Move to non-robust SEs
 
 
 Files changed since last commit:
 
 
+paper_slides/input/ols_iv_estimates.txt
 paper_slides/release/paper/paper.pdf
 paper_slides/release/paper/sconscript.log
-paper_slides/release/talk/sconscript.log
-paper_slides/release/talk/slides.pdf
+paper_slides/release/sconstruct.log
+paper_slides/release/state_of_input.log
+paper_slides/release/state_of_repo.log
+paper_slides/release/tables/ols_iv_estimates.lyx
+paper_slides/release/tables/sconscript.log
 
 ===================================
 
@@ -29,131 +33,119 @@ paper_slides/release/talk/slides.pdf
 
 ===================================
 ./config_user.yaml:
-   modified on: 29 May 2021 23:12:47
+   modified on: 02 Jun 2021 11:42:45
    size of file: 646
 ./run.py:
-   modified on: 26 May 2021 18:12:51
+   modified on: 30 May 2021 00:12:14
    size of file: 458
 ./state_of_repo.log:
-   modified on: 29 May 2021 23:52:41
-   size of file: 602
+   modified on: 02 Jun 2021 15:36:16
+   size of file: 767
 ./SConstruct:
-   modified on: 26 May 2021 18:12:51
+   modified on: 30 May 2021 00:12:14
    size of file: 1818
 ./state_of_input.log:
-   modified on: 29 May 2021 23:52:34
-   size of file: 198
+   modified on: 02 Jun 2021 15:36:08
+   size of file: 183
 ./config_global.yaml:
-   modified on: 26 May 2021 18:12:51
+   modified on: 30 May 2021 00:12:14
    size of file: 1283
 ./sconstruct.log:
-   modified on: 29 May 2021 23:52:41
-   size of file: 369
+   modified on: 02 Jun 2021 15:36:16
+   size of file: 716
 ./input/ols_iv_estimates.txt:
-   modified on: 29 May 2021 23:47:21
+   modified on: 02 Jun 2021 15:33:23
    size of file: 146
 ./input/mean_earnings_schooling.txt:
-   modified on: 29 May 2021 23:46:53
+   modified on: 02 Jun 2021 15:32:44
    size of file: 130
 ./source/paper/paper.lyx:
-   modified on: 29 May 2021 23:36:44
+   modified on: 30 May 2021 00:12:14
    size of file: 7794
 ./source/paper/online_appendix.lyx:
-   modified on: 26 May 2021 18:12:51
+   modified on: 30 May 2021 00:12:14
    size of file: 3610
 ./source/paper/ondeck.lyx:
-   modified on: 26 May 2021 18:12:51
+   modified on: 30 May 2021 00:12:14
    size of file: 2522
 ./source/paper/SConscript:
-   modified on: 26 May 2021 21:54:09
+   modified on: 30 May 2021 00:12:14
    size of file: 713
 ./source/paper/text.lyx:
-   modified on: 26 May 2021 18:12:51
+   modified on: 30 May 2021 00:12:14
    size of file: 2522
 ./source/tables/mean_earnings_schooling.lyx:
-   modified on: 29 May 2021 23:27:12
+   modified on: 30 May 2021 00:12:14
    size of file: 7160
 ./source/tables/ols_iv_estimates.lyx:
-   modified on: 29 May 2021 23:26:51
+   modified on: 30 May 2021 00:12:14
    size of file: 9914
 ./source/tables/SConscript:
-   modified on: 29 May 2021 23:13:01
+   modified on: 30 May 2021 00:12:14
    size of file: 595
 ./source/figures/education_by_qob.lyx:
-   modified on: 29 May 2021 23:29:02
+   modified on: 30 May 2021 00:12:14
    size of file: 4973
 ./source/figures/illustrate_research_design.lyx:
-   modified on: 29 May 2021 23:28:16
+   modified on: 30 May 2021 00:12:14
    size of file: 2930
 ./source/talk/slides.lyx:
-   modified on: 29 May 2021 23:40:42
-   size of file: 10289
+   modified on: 02 Jun 2021 15:20:20
+   size of file: 10540
+./source/talk/slides.lyx~:
+   modified on: 02 Jun 2021 12:32:20
+   size of file: 10541
 ./source/talk/SConscript:
-   modified on: 26 May 2021 18:12:51
+   modified on: 30 May 2021 00:12:14
    size of file: 259
 ./release/state_of_repo.log:
-   modified on: 29 May 2021 23:30:28
-   size of file: 5185
+   modified on: 02 Jun 2021 15:31:31
+   size of file: 3985
 ./release/state_of_input.log:
-   modified on: 29 May 2021 23:30:28
-   size of file: 154
+   modified on: 02 Jun 2021 15:31:31
+   size of file: 183
 ./release/sconstruct.log:
-   modified on: 29 May 2021 23:30:28
-   size of file: 250
+   modified on: 02 Jun 2021 15:31:32
+   size of file: 3261
 ./release/paper/paper.pdf:
-   modified on: 29 May 2021 23:52:37
-   size of file: 82951
-./release/paper/online_appendix.pdf:
-   modified on: 26 May 2021 18:12:51
-   size of file: 130
-./release/paper/ondeck.pdf:
-   modified on: 26 May 2021 18:12:51
-   size of file: 130
+   modified on: 02 Jun 2021 15:36:16
+   size of file: 82379
 ./release/paper/sconscript.log:
-   modified on: 29 May 2021 23:52:37
+   modified on: 02 Jun 2021 15:36:16
    size of file: 548
-./release/paper/text.pdf:
-   modified on: 26 May 2021 18:12:51
-   size of file: 130
 ./release/tables/mean_earnings_schooling.lyx:
-   modified on: 29 May 2021 23:27:16
+   modified on: 02 Jun 2021 15:36:08
    size of file: 7194
 ./release/tables/sconscript.log:
-   modified on: 29 May 2021 23:27:16
+   modified on: 02 Jun 2021 15:36:08
    size of file: 165
 ./release/tables/ols_iv_estimates.lyx:
-   modified on: 29 May 2021 23:27:16
+   modified on: 02 Jun 2021 15:36:08
    size of file: 9946
 ./release/talk/slides.pdf:
-   modified on: 29 May 2021 23:52:41
-   size of file: 44077
+   modified on: 02 Jun 2021 15:20:20
+   size of file: 44623
 ./release/talk/sconscript.log:
-   modified on: 29 May 2021 23:52:41
+   modified on: 02 Jun 2021 15:20:20
    size of file: 550
 ./build/paper/paper.pdf:
-   modified on: 29 May 2021 23:52:37
-   size of file: 82951
+   modified on: 02 Jun 2021 15:36:16
+   size of file: 82379
 ./build/paper/sconscript.log:
-   modified on: 29 May 2021 23:52:37
+   modified on: 02 Jun 2021 15:36:16
    size of file: 548
-./build/tables/ols_iv_estimates.lyx~:
-   modified on: 29 May 2021 23:27:16
-   size of file: 9946
 ./build/tables/mean_earnings_schooling.lyx:
-   modified on: 29 May 2021 23:29:11
-   size of file: 7194
-./build/tables/mean_earnings_schooling.lyx~:
-   modified on: 29 May 2021 23:27:16
+   modified on: 02 Jun 2021 15:36:08
    size of file: 7194
 ./build/tables/sconscript.log:
-   modified on: 29 May 2021 23:27:16
+   modified on: 02 Jun 2021 15:36:08
    size of file: 165
 ./build/tables/ols_iv_estimates.lyx:
-   modified on: 29 May 2021 23:28:48
+   modified on: 02 Jun 2021 15:36:08
    size of file: 9946
 ./build/talk/slides.pdf:
-   modified on: 29 May 2021 23:52:41
-   size of file: 44077
+   modified on: 02 Jun 2021 12:33:03
+   size of file: 44623
 ./build/talk/sconscript.log:
-   modified on: 29 May 2021 23:52:41
+   modified on: 02 Jun 2021 12:33:03
    size of file: 550

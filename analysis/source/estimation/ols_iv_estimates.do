@@ -2,7 +2,7 @@ clear all
 set more off
 set gr off
 
-local infolder  "input"
+local infolder  "raw"
 local outfolder "build/estimation"
 
 clear
@@ -23,11 +23,11 @@ foreach var in earnwkl educ {
   qui sum    `var' if qob1==1
   local mean_`var'_qob1     = r(mean)
   local  obs_`var'_qob1     = r(N)
-  
+
   qui sum    `var' if qob234==1
   local mean_`var'_qob234   = r(mean)
   local  obs_`var'_qob234   = r(N)
-  
+
   qui reg    `var' qob234
   local diff_`var'          = e(b)[1,1]
   local diff_`var'_se       = sqrt(e(V)[1,1])
@@ -53,7 +53,7 @@ qui ivregress 2sls earnwkl (educ=qob1)
 local wald_coef   = e(b)[1,1]
 local wald_se     = sqrt(e(V)[1,1])
 
-qui reg educ qob1
+qui reg educ qob1, robust
 local first_coef  = e(b)[1,1]
 local first_se    = sqrt(e(V)[1,1])
 qui test qob1
@@ -80,7 +80,7 @@ file write  f (`first_se')    _n
 file write  f (`wald_Fval')   _tab (`2sls_Fval')  _n
 file write  f (`overid_chi2') _n
 file write  f (`overid_dof')  _n
-file write  f (`overid_pval') 
+file write  f (`overid_pval')
 file close  f
 
 clear

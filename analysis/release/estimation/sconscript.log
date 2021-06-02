@@ -1,5 +1,5 @@
-*** Builder log created: {2021-05-29 23:46:53}
-*** Builder log completed: {2021-05-29 23:47:21}
+*** Builder log created: {2021-06-02 15:32:43}
+*** Builder log completed: {2021-06-02 15:33:23}
 
   ___  ____  ____  ____  ____ (R)
  /__    /   ____/   /   ____/
@@ -30,7 +30,7 @@ Notes:
 . set gr off
 
 . 
-. local infolder  "input"
+. local infolder  "raw"
 
 . local outfolder "build/estimation"
 
@@ -60,11 +60,11 @@ Notes:
 .   qui sum    `var' if qob1==1
   3.   local mean_`var'_qob1     = r(mean)
   4.   local  obs_`var'_qob1     = r(N)
-  5.   
+  5. 
 .   qui sum    `var' if qob234==1
   6.   local mean_`var'_qob234   = r(mean)
   7.   local  obs_`var'_qob234   = r(N)
-  8.   
+  8. 
 .   qui reg    `var' qob234
   9.   local diff_`var'          = e(b)[1,1]
  10.   local diff_`var'_se       = sqrt(e(V)[1,1])
@@ -110,7 +110,7 @@ Notes:
 . local wald_se     = sqrt(e(V)[1,1])
 
 . 
-. qui reg educ qob1
+. qui reg educ qob1, robust
 
 . local first_coef  = e(b)[1,1]
 
@@ -162,7 +162,7 @@ Notes:
 
 . file write  f (`overid_dof')  _n
 
-. file write  f (`overid_pval') 
+. file write  f (`overid_pval')
 
 . file close  f
 

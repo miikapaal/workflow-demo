@@ -2,7 +2,7 @@ Import('env')
 
 build  = env['CONFIG']['global']['build']['descriptive']
 source = env['CONFIG']['global']['source']['descriptive']
-input  = env['CONFIG']['global']['input']
+raw    = env['CONFIG']['global']['input']
 
 env.BuildStata(target  = ['#%s/education_by_yob_qob.eps'        % build,
                           '#%s/education_by_yob_qob.png'        % build,
@@ -11,6 +11,6 @@ env.BuildStata(target  = ['#%s/education_by_yob_qob.eps'        % build,
                           '#%s/education_by_qob_12plus.eps'     % build,
                           '#%s/education_by_qob_12plus.png'     % build],
                source  = ['#%s/illustrate_research_design.do'   % source,
-                          '#%s/qob1.dta'                        % input])
+                          '#%s/qob1.dta'                        % raw])
 
 env.Install('#release', '#%s/' % build)
