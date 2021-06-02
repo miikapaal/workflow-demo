@@ -8,30 +8,25 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit f0a6a38f5cdefa52b0f54885d99b732988a463a8
+commit 864b33e1d0ec1e6f829ae493b0ec9e3063b7c741
 Author: Miika Päällysaho <miika.paallysaho@ne.su.se>
-Date:   Wed Jun 2 12:33:31 2021 +0200
+Date:   Wed Jun 2 15:27:25 2021 +0200
 
-    #3 Small addition to last slide
+    #3 Add robust SEs, change axis labels
 
 
 Files changed since last commit:
 
 
-analysis/release/descriptive/education_by_qob.eps
-analysis/release/descriptive/education_by_qob.png
-analysis/release/descriptive/education_by_qob_12plus.eps
-analysis/release/descriptive/education_by_qob_12plus.png
-analysis/release/descriptive/education_by_qob_lessthan12.eps
-analysis/release/descriptive/education_by_qob_lessthan12.png
-analysis/release/descriptive/education_by_yob_qob.eps
-analysis/release/descriptive/education_by_yob_qob.png
-analysis/release/descriptive/sconscript.log
 analysis/release/estimation/mean_earnings_schooling.txt
 analysis/release/estimation/ols_iv_estimates.txt
 analysis/release/estimation/sconscript.log
-analysis/source/descriptive/illustrate_research_design.do
 analysis/source/estimation/ols_iv_estimates.do
+paper_slides/input/mean_earnings_schooling.txt
+paper_slides/input/ols_iv_estimates.txt
+paper_slides/release/sconstruct.log
+paper_slides/release/state_of_input.log
+paper_slides/release/state_of_repo.log
 
 ===================================
 
@@ -45,23 +40,23 @@ analysis/source/estimation/ols_iv_estimates.do
    modified on: 30 May 2021 00:12:14
    size of file: 449
 ./state_of_repo.log:
-   modified on: 02 Jun 2021 15:25:42
-   size of file: 1188
+   modified on: 02 Jun 2021 15:33:24
+   size of file: 850
 ./SConstruct:
    modified on: 02 Jun 2021 15:20:20
    size of file: 1872
 ./state_of_input.log:
-   modified on: 02 Jun 2021 15:24:39
+   modified on: 02 Jun 2021 15:32:43
    size of file: 143
 ./config_global.yaml:
    modified on: 02 Jun 2021 15:20:20
    size of file: 1253
 ./sconstruct.log:
-   modified on: 02 Jun 2021 15:25:41
-   size of file: 805
+   modified on: 02 Jun 2021 15:33:24
+   size of file: 361
 ./source/estimation/ols_iv_estimates.do:
-   modified on: 02 Jun 2021 15:23:55
-   size of file: 2485
+   modified on: 02 Jun 2021 15:32:31
+   size of file: 2453
 ./source/estimation/SConscript:
    modified on: 02 Jun 2021 15:20:20
    size of file: 490
@@ -72,22 +67,22 @@ analysis/source/estimation/ols_iv_estimates.do
    modified on: 02 Jun 2021 15:23:29
    size of file: 2210
 ./release/state_of_repo.log:
-   modified on: 02 Jun 2021 11:33:28
-   size of file: 5000
+   modified on: 02 Jun 2021 15:25:42
+   size of file: 5191
 ./release/state_of_input.log:
-   modified on: 02 Jun 2021 11:32:23
+   modified on: 02 Jun 2021 15:24:39
    size of file: 143
 ./release/sconstruct.log:
-   modified on: 02 Jun 2021 11:33:28
-   size of file: 17776
+   modified on: 02 Jun 2021 15:25:42
+   size of file: 17590
 ./release/estimation/ols_iv_estimates.txt:
-   modified on: 02 Jun 2021 15:25:41
-   size of file: 122
+   modified on: 02 Jun 2021 15:33:23
+   size of file: 146
 ./release/estimation/sconscript.log:
-   modified on: 02 Jun 2021 15:25:41
-   size of file: 3894
+   modified on: 02 Jun 2021 15:33:23
+   size of file: 3862
 ./release/estimation/mean_earnings_schooling.txt:
-   modified on: 02 Jun 2021 15:24:50
+   modified on: 02 Jun 2021 15:32:44
    size of file: 130
 ./release/descriptive/sconscript_descriptive.log:
    modified on: 30 May 2021 00:12:14
@@ -120,13 +115,13 @@ analysis/source/estimation/ols_iv_estimates.do
    modified on: 02 Jun 2021 15:24:49
    size of file: 15017
 ./build/estimation/ols_iv_estimates.txt:
-   modified on: 02 Jun 2021 15:25:41
-   size of file: 122
+   modified on: 02 Jun 2021 15:33:23
+   size of file: 146
 ./build/estimation/sconscript.log:
-   modified on: 02 Jun 2021 15:25:41
-   size of file: 3894
+   modified on: 02 Jun 2021 15:33:23
+   size of file: 3862
 ./build/estimation/mean_earnings_schooling.txt:
-   modified on: 02 Jun 2021 15:24:50
+   modified on: 02 Jun 2021 15:32:44
    size of file: 130
 ./build/descriptive/education_by_yob_qob.eps:
    modified on: 02 Jun 2021 15:24:43

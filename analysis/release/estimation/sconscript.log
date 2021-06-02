@@ -1,5 +1,5 @@
-*** Builder log created: {2021-06-02 15:24:49}
-*** Builder log completed: {2021-06-02 15:25:41}
+*** Builder log created: {2021-06-02 15:32:43}
+*** Builder log completed: {2021-06-02 15:33:23}
 
   ___  ____  ____  ____  ____ (R)
  /__    /   ____/   /   ____/
@@ -65,7 +65,7 @@ Notes:
   6.   local mean_`var'_qob234   = r(mean)
   7.   local  obs_`var'_qob234   = r(N)
   8. 
-.   qui reg    `var' qob234, robust
+.   qui reg    `var' qob234
   9.   local diff_`var'          = e(b)[1,1]
  10.   local diff_`var'_se       = sqrt(e(V)[1,1])
  11.   local diff_`var'_obs      = e(N)
@@ -96,14 +96,14 @@ Notes:
 
 . 
 . 
-. qui reg earnwkl educ, robust
+. qui reg earnwkl educ
 
 . local ols_coef    = e(b)[1,1]
 
 . local ols_se      = sqrt(e(V)[1,1])
 
 . 
-. qui ivregress 2sls earnwkl (educ=qob1), robust
+. qui ivregress 2sls earnwkl (educ=qob1)
 
 . local wald_coef   = e(b)[1,1]
 
@@ -122,7 +122,7 @@ Notes:
 
 . 
 . * Replicate Table V, Column (2) in Angrist & Kruger (QJE 1991)
-. qui ivregress 2sls earnwkl i.yob (educ=i.yob#i.qob), robust
+. qui ivregress 2sls earnwkl i.yob (educ=i.yob#i.qob)
 
 . local 2sls_coef   = e(b)[1,1]
 

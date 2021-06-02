@@ -28,7 +28,7 @@ foreach var in earnwkl educ {
   local mean_`var'_qob234   = r(mean)
   local  obs_`var'_qob234   = r(N)
 
-  qui reg    `var' qob234, robust
+  qui reg    `var' qob234
   local diff_`var'          = e(b)[1,1]
   local diff_`var'_se       = sqrt(e(V)[1,1])
   local diff_`var'_obs      = e(N)
@@ -45,11 +45,11 @@ file write  f  (`obs_earnwkl_qob1')  _tab (`obs_earnwkl_qob234')   _tab  (`diff_
 file close  f
 
 
-qui reg earnwkl educ, robust
+qui reg earnwkl educ
 local ols_coef    = e(b)[1,1]
 local ols_se      = sqrt(e(V)[1,1])
 
-qui ivregress 2sls earnwkl (educ=qob1), robust
+qui ivregress 2sls earnwkl (educ=qob1)
 local wald_coef   = e(b)[1,1]
 local wald_se     = sqrt(e(V)[1,1])
 
@@ -60,7 +60,7 @@ qui test qob1
 local wald_Fval   = r(F)
 
 * Replicate Table V, Column (2) in Angrist & Kruger (QJE 1991)
-qui ivregress 2sls earnwkl i.yob (educ=i.yob#i.qob), robust
+qui ivregress 2sls earnwkl i.yob (educ=i.yob#i.qob)
 local 2sls_coef   = e(b)[1,1]
 local 2sls_se     = sqrt(e(V)[1,1])
 qui estat first
