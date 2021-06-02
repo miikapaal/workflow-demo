@@ -1,39 +1,44 @@
-*** New build: {2021-06-02 12:32:59} ***
+*** New build: {2021-06-02 15:36:08} ***
 scons: done reading SConscript files.
 scons: Building targets ...
-build_lyx(["build/talk/slides.pdf"], ["source/talk/slides.lyx"])
-Install directory: "build/talk" as "release/talk"
+build_tables(["build/tables/mean_earnings_schooling.lyx"], ["source/tables/mean_earnings_schooling.lyx", "input/mean_earnings_schooling.txt"])
+source/tables/mean_earnings_schooling.lyx filled successfully by tablefill
+build_tables(["build/tables/ols_iv_estimates.lyx"], ["source/tables/ols_iv_estimates.lyx", "input/ols_iv_estimates.txt"])
+source/tables/ols_iv_estimates.lyx filled successfully by tablefill
+build_lyx(["build/paper/paper.pdf"], ["source/paper/paper.lyx"])
+Install directory: "build/paper" as "release/paper"
+Install directory: "build/tables" as "release/tables"
 scons: done building targets.
-*** Build completed: {2021-06-02 12:33:03} ***
+*** Build completed: {2021-06-02 15:36:16} ***
  
  
-./release/talk/sconscript.log
-*** Builder log created: {2021-06-02 12:32:59}
-*** Builder log completed: {2021-06-02 12:33:03}
+./build/paper/sconscript.log
+*** Builder log created: {2021-06-02 15:36:08}
+*** Builder log completed: {2021-06-02 15:36:16}
 This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex)
  restricted \write18 enabled.
 entering extended mode
-(./slides.tex
+(./paper.tex
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-03-06>
 This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex)
  restricted \write18 enabled.
 entering extended mode
-(./slides.tex
+(./paper.tex
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-03-06>
-./build/talk/sconscript.log
-*** Builder log created: {2021-06-02 12:32:59}
-*** Builder log completed: {2021-06-02 12:33:03}
+./release/paper/sconscript.log
+*** Builder log created: {2021-06-02 15:36:08}
+*** Builder log completed: {2021-06-02 15:36:16}
 This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex)
  restricted \write18 enabled.
 entering extended mode
-(./slides.tex
+(./paper.tex
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-03-06>
 This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex)
  restricted \write18 enabled.
 entering extended mode
-(./slides.tex
+(./paper.tex
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-03-06>
