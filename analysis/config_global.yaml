@@ -12,7 +12,7 @@ source:
   descriptive: source/descriptive
 
 # Input Directories (will record contents)
-input: input
+input: raw
 
 # Executable names
 executable_names:

@@ -47,6 +47,6 @@ debrief_args['lfs_required'] = bool('git_lfs' in prereqs)
 atexit.register(gs.scons_debrief, args = debrief_args)
 
 # Run sub-trees
-SConscript('source/estimation/SConscript')
 SConscript('source/descriptive/SConscript')
+SConscript('source/estimation/SConscript')
 Default('./build', './release')
